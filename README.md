@@ -1,82 +1,101 @@
-# 🤖 Phân Tích & Khuyến Nghị Ứng Dụng AI Agent Trong Ngành Khoa Học Máy Tính
+# 🗺️ CS Agent Map: AI Agent Readiness Map for Computer Science Occupations
 
-## 📌 Tổng Quan Dự Án (Project Overview)
-
-Dự án này được xây dựng trong khuôn khổ bài kiểm tra môn **Trực quan hóa dữ liệu (Data Visualization)**. Mục tiêu cốt lõi là chuyển đổi các tập dữ liệu khảo sát phức tạp về hành vi của người lao động và đánh giá của chuyên gia công nghệ thành một Dashboard tương tác trực quan trên nền tảng **Streamlit**.
-
-Thông qua lăng kính của một Chuyên gia phân tích hệ thống, dự án phân tích sâu thực trạng ứng dụng AI trong Vòng đời phát triển phần mềm (SDLC), từ đó thiết lập **Ma trận chiến lược** nhằm khuyến nghị mô hình tái thiết kế quy trình nghiệp vụ (BPM) và kiểm soát rủi ro an toàn thông tin (Audit IT).
-
-- **Sinh viên thực hiện:** Nguyễn Huy Gia Toàn
-- **Chuyên ngành:** Hệ thống thông tin Chuyển đổi số (DTIS/MIS)
-- **Công cụ phát triển:** Python, Streamlit, Pandas, Plotly Express
+> **A Human–AI Collaboration Perspective Using the WORKBank Dataset**
 
 ---
 
-## 🗺️ Lộ Trình Triển Khai Bài Làm (Execution Roadmap)
+## 📌 1. Đặt Vấn Đề (Introduction & Context)
 
-[Bước 1: Tích hợp & Làm sạch dữ liệu (ETL)]
-│
-▼
-[Bước 2: Mô hình hóa Trực quan bằng Streamlit & Plotly]
-│
-▼
-[Bước 3: Trích xuất Insight Nghiệp vụ (BA/BPM)]
-│
-▼
-[Bước 4: Thiết lập Khung Khuyến nghị Kiến trúc]
+Sự bùng nổ của AI Agent đang tái định hình sâu sắc cấu trúc công việc trong lĩnh vực Khoa học Máy tính (Computer Science - CS). Tuy nhiên, phần lớn các báo cáo hiện nay đều tiếp cận theo hướng nhị phân chung chung: _"AI sẽ thay thế lập trình viên?"_ hay _"Công việc nào dễ bị tự động hóa nhất?"_.
 
-1. **Bước 1 (Data ETL):** Sử dụng `Pandas` lọc và chuẩn hóa dữ liệu từ các tập tin gốc, cô lập nhóm ngành Khoa học máy tính & IT. Thực hiện phép gộp quan hệ (Inner Join) dựa trên khóa `Task ID` để kết hợp mong muốn tự động hóa với năng lực thực tế của AI.
-2. **Bước 2 (Data Visualization):** Phát triển giao diện Web Dashboard bằng `Streamlit`. Sử dụng `Plotly Express` dựng biểu đồ cột chồng 100% (100% Stacked Bar Chart) và biểu đồ phân tán (Scatter Plot) tương tác cao cấp.
-3. **Bước 3 (Business Analytics):** Đọc hiểu dữ liệu trực quan để định vị các điểm nghẽn vận hành và phân nhóm tác vụ nghiệp vụ.
-4. **Bước 4 (Solution Consulting):** Đóng gói báo cáo thành các giải pháp kiến trúc: Vận hành (Tactical), Quy trình (BPM Workflow), và Quản trị (Governance).
+Dự án này chuyển dịch góc nhìn sang hướng tiếp cận thực tế và sâu sắc hơn: **Không hỏi AI có thay thế con người hay không, mà hỏi trong từng nhiệm vụ (task-level) cụ thể của ngành CS, AI nên tham gia ở mức độ nào và con người nên giữ vai trò kiểm soát gì?**
+
+Dựa trên bộ dữ liệu nghiên cứu **WORKBank** (Stanford University), dự án xây dựng một **Bản đồ mức độ sẵn sàng ứng dụng AI Agent (AI Agent Readiness Map)** dành riêng cho nhóm ngành Khoa học Máy tính. Từ đó, định hình một mô hình cộng tác tối ưu giữa Người và Máy (Human-AI Collaboration), giúp giải phóng kỹ sư khỏi các tác vụ lặp lại để tập trung vào các công việc mang lại giá trị chiến lược cao hơn.
 
 ---
 
-## 📊 Cấu Trúc Luồng Phân Tích & Insights Dữ Liệu
+## 🎯 2. Mục Tiêu & Câu Hỏi Nghiên Cứu
 
-### 1. Tần suất Ứng dụng AI trong Vòng đời SDLC
+### Mục tiêu tổng quát
 
-- **Trực quan hóa:** Biểu đồ cột chồng 100% (100% Stacked Bar Chart).
-- **Trục dữ liệu:** Trục Y phân loại các phân khúc tác vụ chuyên môn (_Lập trình, Xử lý dữ liệu, Thiết kế hệ thống_); Trục X biểu diễn tỷ lệ % tần suất phản hồi (_Daily, Weekly, Monthly, Never_).
-- **Insight cốt lõi:** Dữ liệu cho thấy sự phân cực rất lớn. AI Agent đã cắm rễ sâu vào tác vụ thực thi kỹ thuật hàng ngày như **Lập trình (Coding)** và **Xử lý dữ liệu (Data Processing)**. Tuy nhiên, ở mảng tư duy kiến trúc vĩ mô như **Thiết kế hệ thống (System Design)**, tỷ lệ "Never" chiếm ưu thế, thiết lập ranh giới hiện tại của năng lực AI.
+Phân tích, đánh giá và trực quan hóa mức độ sẵn sàng triển khai AI Agent trong các tác vụ ngành CS; xác định ranh giới tối ưu giữa tự động hóa hoàn toàn và tăng cường năng lực con người.
 
-### 2. Ma trận Chiến lược Tự động hóa Quy trình (BPM Matrix)
+### Câu hỏi nghiên cứu (Research Questions)
 
-- **Trực quan hóa:** Biểu đồ phân tán (Scatter Plot) chia 4 góc phần tư tại điểm mốc trung bình 3.0.
-- **Trục dữ liệu:** Trục X (Năng lực AI thực tế theo chuyên gia); Trục Y (Mức độ mong muốn tự động hóa của kỹ sư).
-- **Phân nhóm quyết định:**
-  - **Quick Wins (Trên - Phải):** Năng lực AI cao + Kỹ sư muốn làm. Tập trung vào: Viết mã lặp lại, Kiểm thử tự động (QA/QC), Quét lỗi bảo mật định sẵn. -> _Khuyến nghị: Tự động hóa hoàn toàn._
-  - **Điểm nghẽn (Trên - Trái):** Kỹ sư áp lực và muốn giao việc, nhưng AI chưa đủ năng lực (ví dụ: Quản lý dự án phức tạp). -> _Khuyến nghị: Cải tiến quy trình tổ chức, không ép dùng AI._
-  - **Human Core (Dưới - Trái):** Con người làm chủ đạo do độ bất định (`Involved Uncertainty`) cao (ví dụ: Đánh giá đạo đức thuật toán, Phê duyệt kiến trúc lõi). -> _Khuyến nghị: Giữ nguyên nhân sự._
+- **RQ1:** Những nhiệm vụ nào trong lĩnh vực CS có mức độ sẵn sàng ứng dụng AI Agent cao nhất (_Automate Now_)?
+- **RQ2:** Những nhiệm vụ nào vẫn bắt buộc giữ mức độ kiểm soát của con người cao (_Human-Centric_)?
+- **RQ3:** Có tồn tại khoảng cách nhận thức (Gap) giữa mong muốn của người lao động (Worker Desires) và đánh giá của chuyên gia công nghệ (Expert Ratings) không?
+- **RQ4:** Các kỹ năng cốt lõi (OOP, DB, System Design...) sẽ dịch chuyển như thế nào trong kỷ nguyên AI Agent?
 
 ---
 
-## 🎯 Khung Khuyến Nghị Chiến Lược Từ Chuyên Gia MIS
+## 📊 3. Đối Tượng & Phương Pháp Phân Tích
 
-Dựa trên dữ liệu đã phân tích, mô hình chuyển đổi số được đề xuất theo 3 tầng chiến lược:
+### Phạm vi dữ liệu (Scope)
 
-1. **Khuyến nghị Vận hành (Tactical):** Tích hợp trực tiếp các Agent tự động hóa nhóm tác vụ _Quick Wins_ vào luồng CI/CD và hệ thống quản lý mã nguồn mở (Git/GitHub) nhằm cắt bỏ thời gian chờ thủ công trong chu trình SDLC.
-2. **Khuyến nghị Quy trình (BPM):** Thiết lập cơ chế **Human-in-the-loop (Con người kiểm soát ở giữa)** bắt buộc cho các quy trình thuộc vùng _Điểm nghẽn_ và _Human Core_. AI Agent chỉ đóng vai trò trợ lý tổng hợp thông tin, quyền duyệt cuối cùng thuộc về nhân sự cấp cao.
-3. **Khuyến nghị Quản trị (Governance):** Xây dựng Khung kiểm toán IT định kỳ đối với sản phẩm đầu ra của AI Agent nhằm kiểm soát rủi ro ảo tưởng dữ liệu (Hallucination) và bảo mật an ninh hệ thống lõi.
+Dự án lọc và tập trung phân tích sâu vào **9 nghề nghiệp cốt lõi** thuộc lĩnh vực Khoa học Máy tính trong WORKBank Dataset:
+
+- **Nhóm Phát triển (Dev):** Software Developers, Computer Programmers, Web Developers.
+- **Nhóm Dữ liệu (Data):** Data Scientists, Database Administrators.
+- **Nhóm Hệ thống & Bảo mật (System & Cyber):** Computer Systems Analysts, Information Security Analysts, Network Administrators.
+- **Nhóm Quản lý (Management):** Information Technology Project Managers.
+
+### Chỉ số độc quyền: CS Agent Fit Score
+
+Để lượng hóa chính xác, dự án tự thiết lập một chỉ số tổng hợp **CS Agent Fit Score (0 - 100)** được tính toán theo công thức có trọng số:
+
+$$Fit\_Score = \left( 0.4 \times Automation\_Desire + 0.4 \times Expert\_Capability \right) - \left( 0.2 \times Human\_Agency \right)$$
+
+_Sau đó, điểm số được chuẩn hóa về thang điểm 0–100 và phân cụm thành 4 vùng chiến lược:_
+
+- **80 - 100 | Automate Now:** Tác vụ lặp lại cao, xác minh rõ ràng $\rightarrow$ Giao hoàn toàn cho AI Agent.
+- **60 - 79 | Strong AI Assistant:** AI đóng vai trò trợ lý chủ lực, sinh mã và cấu trúc hóa thông tin.
+- **40 - 59 | Human-AI Partnership (Mức H3):** Điểm vàng cộng tác ngang hàng (Copilot), AI và người cùng làm.
+- **0 - 39 | Human-Centric:** Tác vụ mơ hồ, cần giao tiếp, kiến trúc hoặc ra quyết định đạo đức $\rightarrow$ Giữ con người ở trung tâm.
 
 ---
 
-## 💻 Hướng Dẫn Chạy Ứng Dụng (Installation & Run)
+## 🛠️ 4. Kiến Trúc Ứng Dụng (Streamlit Dashboard Layout)
 
-### Yêu cầu hệ thống
+Ứng dụng tương tác được xây dựng bằng **Streamlit** và **Plotly** bao gồm 8 phân hệ trực quan hóa câu chuyện dữ liệu (Data Storytelling):
 
-Đảm bảo máy tính của bạn đã cài đặt Python (phiên bản >= 3.8) và các file dữ liệu sau nằm chung thư mục dự án:
+1. **Home (Tổng quan):** Giới thiệu bối cảnh, phương pháp luận và công thức chỉ số riêng.
+2. **Dataset Explorer:** Thống kê mô tả toàn bộ số lượng task, phân bổ ngành nghề và tổng quan phân cụm.
+3. **AI Readiness Map (Chart 1 & 2):** Biểu đồ bong bóng (Scatter Plot) định vị task trên 2 trục _Expert Capability_ vs _Worker Desire_, kết hợp biểu đồ cột ngang top 15 tác vụ sẵn sàng nhất.
+4. **Human Agency Analysis (Chart 3):** Biểu đồ cột chồng (Stacked Bar) thể hiện tỷ lệ phân bổ các mức kiểm soát từ H1 đến H5 theo từng occupation.
+5. **Worker vs Expert Gap (Chart 4):** Biểu đồ phân kỳ (Diverging Bar) đo lường sự lệch pha nhận thức giữa năng lực công nghệ thực tế và mong muốn của kỹ sư.
+6. **Future Skill Shift (Chart 5):** Bản đồ định vị nhóm kỹ năng (Skill Heatmap) để dự đoán xu hướng dịch chuyển giá trị của nguồn nhân lực.
+7. **Recommendations:** Lộ trình triển khai AI chi tiết cho 4 nhóm tác vụ cốt lõi (Coding, Testing, Data, PM).
+8. **About Project:** Ghi chú học thuật, giới hạn nghiên cứu và thông tin bản quyền.
 
-- `domain_worker_desires.csv`
-- `expert_rated_technological_capability.csv`
-- `domain_worker_metadata.csv`
+---
 
-### Các bước khởi chạy
+## 💡 5. Tóm Tắt Insight Cốt Lõi (Key Findings)
 
-1. Cài đặt các thư viện phụ thuộc bắt buộc:
-   pip install streamlit pandas plotly openpyxl
+- **Điểm vàng H3 (Equal Partnership):** Trong lĩnh vực CS, mức độ cộng tác ngang hàng (H3) là vùng phổ biến nhất. Kỹ sư không muốn bị thay thế hoàn toàn, họ muốn AI giải phóng họ khỏi áp lực ghi chép/kiểm tra để tập trung vào tư duy kiến trúc.
+- **Sự dịch chuyển giá trị kỹ năng:** Các tác vụ có tính xác minh cao, lặp lại nhiều như _Viết tài liệu hệ thống (Documentation)_, _Sinh mã boilerplate (Coding)_, và _Kiểm thử tự động (QA/Testing)_ dịch chuyển mạnh về vùng tự động hóa. Ngược lại, năng lực phán đoán kiến trúc, thấu cảm yêu cầu khách hàng (Business Analysis) và đàm phán stakeholder ngày càng tăng giá trị.
+- **Xung đột nhận thức (Gap):** Phát hiện các vùng có khoảng cách lớn giữa đánh giá của chuyên gia AI và mong muốn thực tế của lập trình viên, chỉ ra những điểm nghẽn về mặt tâm lý an toàn việc làm hoặc giới hạn thực tế của công cụ.
 
-2. Khởi chạy Dashboard trên môi trường Local:
-   streamlit run app.py
+---
 
-3. Hệ thống sẽ kích hoạt giao diện Web tương tác tại địa chỉ mặc định: http://localhost:8501.
+## ⚠️ 6. Hạn Chế & Lưu Ý Đạo Đức (Limitations & Ethical Note)
+
+- **Tính phẳng của dữ liệu:** Dự án sử dụng giá trị trung bình (mean) để tổng hợp ý kiến đánh giá, điều này có thể làm mờ đi các góc nhìn thiểu số đặc biệt của một số chuyên gia hoặc worker.
+- **Khía cạnh Đạo đức:** Việc đẩy mạnh _Automate Now_ ở một số khâu (như tự động duyệt log, phân quyền) cần được kiểm soát chặt chẽ bằng cơ chế kiểm toán công nghệ (Audit IT) để tránh các lỗ hổng thiên kiến hoặc lỗi bảo mật tự động hệ thống.
+
+---
+
+## 🚀 7. Hướng Dẫn Chạy Ứng Dụng (Installation & Run)
+
+**Bước 1: Clone kho lưu trữ này về máy**
+
+```bash
+git clone [https://github.com/NguyenHuyGiaToan/midtest_DA_Nguyen_Huy_Gia_Toan.git]
+
+
+**Bước 2: Cài đặt các thư viện cần thiết**
+pip install streamlit pandas numpy plotly
+
+**Bước 3: Khởi chạy ứng dụng Streamlit**
+streamlit run Maindashboard.py
+```
